@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- 
+194 Cars leaving the Computer Science Building and campus of the University of Erlangen-Nuremberg
+Copyright (C) 2008 Christoph Sommer <christoph.sommer@informatik.uni-erlangen.de>
+Licensed under the Creative Commons Attribution-ShareAlike 2.0 license <http://creativecommons.org/licenses/by-sa/2.0/>
+-->
+<routes>
+<vType id="vtype0" accel="2.6" decel="4.5" sigma="0.5" length="2.5" minGap="2.5" maxSpeed="14" color="1,1,0"/>
+  
+<vTypeDistribution id="urban">
+    <vType id="uSlowCar" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="14" color="0,0,0" probability="0.05"/>
+	<vType id="uCar" accel="2.6" decel="4.5" sigma="0.5" length="4" minGap="2.5" maxSpeed="25" color="0,1,1" probability="0.69"/>
+	<vType id="uFastCar" accel="2.6" decel="4.5" sigma="0" length="4" minGap="3" maxSpeed="33" color="0,1,0" probability="0.01"/>
+	<vType id="uBus" accel="2.6" decel="4.5" sigma="0" length="12" minGap="3" maxSpeed="17" color="1,0,1" guiShape="bus" probability="0.25"/>
+</vTypeDistribution>
+
+
+<vTypeDistribution id="highway">
+    <vType id="hSlowCar" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="25" color="0,0,1" probability="0.05"/>
+	<vType id="hCar" accel="2.6" decel="4.5" sigma="0.5" length="4" minGap="2.5" maxSpeed="70" color="1,1,0" probability="0.69"/>
+	<vType id="hFastCar" accel="2.6" decel="4.5" sigma="0" length="4" minGap="3" maxSpeed="39" color="0,1,0"  probability="0.01"/>
+	<vType id="hBus" accel="2.6" decel="4.5" sigma="0" length="12" minGap="3" maxSpeed="25" color="1,1,1" guiShape="bus" probability="0.15"/>
+	<vType id="hTruck" accel="2.6" decel="4.5" sigma="0" length="12" minGap="3" maxSpeed="25" color="1,1,0" guiShape="bus" probability="0.10"/>
+</vTypeDistribution>
+
+
+<route id="route0" edges="-39539626 -5445204#2 -5445204#1 113939244#2 -126606716 23339459 30405358#1 85355912 85355911#0 85355911#1 30405356 5931612 30350450#0 30350450#1 30350450#2 4006702#0 4006702#1 4900043 4900041#1"/>
+<route id="route1" edges="39539626"/>
+ 
+
+<flow id="flow0" type="vtype0" route="route0" begin="0" period="3" number="15"/>
+<flow id="flow1" type="urban" route="route0" begin="0" period="3" number="10"/>
+<flow id="flow2" type="highway" route="route0" begin="0" period="3" number="10"/>
+<flow id="flow3" type="highway" route="route1" begin="0" period="3" number="10"/>
+</routes>
